@@ -32,11 +32,13 @@ const Layout = ({ location, title, children }) => {
                 トップへもどる
             </div>
             <div className="inner">
-                <div class="copyright">Copyright&copy;TARO YAMADA. All Rights Reserved.</div>
+                <div className="copyright">Copyright&copy;TARO YAMADA. All Rights Reserved.</div>
             </div>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.com">Gatsby</a>
+            <div className="inner">
+              © {new Date().getFullYear()}, Built with
+              {` `}
+              <a href="https://www.gatsbyjs.com">Gatsby</a>
+            </div>
         </footer>
 
       </div>

@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `MORISHITA MAKOTO PORTFOLIO`,
     author: {
-      name: `MORISHITA Makoto`,
-      summary: `A programmer in Komatsu.`,
+      name: `MORISHITA MAKOTO`,
+      summary: `a programmer in komatsu`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
@@ -62,7 +62,7 @@ module.exports = {
       options: {
         name: `Gatsby Starter Blog`,
         short_name: `GatsbyJS`,
-        start_url: `/`,
+        start_url: `/blog`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,

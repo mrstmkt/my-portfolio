@@ -1,3 +1,9 @@
+let activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+require("dotenv").config({
+  path: `.env.${activeEnv}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `MORISHITA MAKOTO PORTFOLIO`,
@@ -73,5 +79,20 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-source-microcms",
+      options: {
+        apiKey: process.env.X_API_KEY,
+        serviceId: process.env.SERVICE_ID,
+        apis: [
+          {
+            endpoint: 'works',
+          },
+          {
+            endpoint: 'articles',
+          },
+        ],
+      },
+    },
   ],
 }

@@ -22,7 +22,7 @@ const WorksSection = ({ location, title, children }) => {
                 <figcaption className="works-body">
                   <div className="works-title">サイト名が入る</div>
                   <div className="works-text">Design / Coding(Responsive) / WordPress</div>
-                  <div className="works-url"><a class="works-url-link" href="https://yahoo.co.jp" target="_blank"  rel="noreferrer">Link</a>
+                  <div className="works-url"><a className="works-url-link" href="https://yahoo.co.jp" target="_blank"  rel="noreferrer">Link</a>
                   </div>
                 </figcaption>
               </figure>

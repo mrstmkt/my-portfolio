@@ -644,4 +644,14 @@ p.logo-title {
   .footer .inner {
     padding: 20px 0;
   }
+
+  .video-wrap {
+    display: none;
+  }
+  .video-wrap video {
+    display: none;
+  }
+  p.logo-title {
+    display: none;
+  }  
 }

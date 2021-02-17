@@ -108,10 +108,13 @@ li {
 ヘッダー
 ---------------------------------*/
 .header {
-  display: flex;
+  /* display: flex; */
+  display: none;
   align-items: center;
   justify-content: center;
   height: 86vh;
+  background-image: url("./assets/20200621_131226.jpg");
+  background-position: center center
 }
 
 .logo {
@@ -435,6 +438,23 @@ li {
   background-color: #ccc;
 }
 
+.video-wrap {
+  position: relative;
+}
+.video-wrap video {
+  display: block;
+  width: 100%;
+  margin: 0 0 0 auto;
+}
+p.logo-title {
+  font-family: serif;          
+  color: #fff;
+  font-size: 400%;
+  position: absolute;
+  left: 30%;
+  top: 200px;
+  z-index: 1;
+}
 /*media Queries 767
 ----------------------------------------------------*/
 @media screen and (max-width: 767px) {
@@ -487,6 +507,7 @@ li {
 
   /* ヘッダー */
   .header {
+    display: flex;
     height: 70vh;
   }
 

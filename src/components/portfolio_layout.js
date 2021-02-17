@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import "../style_portfolio.css"
+import bgVideo from "../assets/VID_20200618_220631_292.mp4"
+import placeHolder from  "../assets/20200621_131226.jpg"
 
 const Layout = ({ location, title, children }) => {
     let header = (
@@ -20,11 +22,17 @@ const Layout = ({ location, title, children }) => {
             <li className="gnav-item"><a className="gnav-link" href="#contact-section">CONTACT</a></li>
         </ul>
         </nav>
+        <div className="video-wrap">
+            <p className="logo-title">Brilliant Blue</p>
+            <video src={bgVideo} autoPlay loop muted>
+              <img src={placeHolder} alt="Placeholder" />
+            </video>
+          </div>
         <header className="header">
-            <h1 className="logo">
-                <div className="logo-title">TARO YAMADA</div>
-                <div className="logo-subtitle">PORTFOLIO</div>
-            </h1>
+          <h1 className="logo">
+            <div className="logo-title">TARO YAMADA</div>
+            <div className="logo-subtitle">PORTFOLIO</div>
+          </h1>
         </header>
         <main className="content">{children}</main>
         <footer class="footer">

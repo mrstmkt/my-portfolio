@@ -5,11 +5,11 @@ import bgVideo from "../assets/VID_20200618_220631_292.mp4"
 import placeHolder from  "../assets/20200621_131226.jpg"
 
 const Layout = ({ location, title, children }) => {
-    let header = (
-        <h1 className="main-heading">
-          <Link to="/">{title}</Link>
-        </h1>
-      )
+    // let header = (
+    //     <h1 className="main-heading">
+    //       <Link to="/">{title}</Link>
+    //     </h1>
+    //   )
   
     return (
       <div className="wrapper">

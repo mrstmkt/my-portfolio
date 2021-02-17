@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import "../style_portfolio.css"
+import BlogIndex from "../pages/blog"
 
 const BlogSection = ({ location, title, children }) => {
     const data = useStaticQuery(graphql`
@@ -27,7 +28,7 @@ const BlogSection = ({ location, title, children }) => {
         <section className="blog-section section" id="blog-section">
         <div className="inner">
           <div className="section-heading">
-            <h2 className="heading-primary">BLOG</h2>
+            <h2 className="heading-primary"><Link to="/blog/">BLOG</Link></h2>
           </div>
           <div className="section-lead">
             <p>BLOG BLOG BLOG</p>

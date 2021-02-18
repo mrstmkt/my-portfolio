@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import "../style_portfolio.css"
-import BlogIndex from "../pages/blog"
 
 const BlogSection = ({ location, title, children }) => {
     const data = useStaticQuery(graphql`

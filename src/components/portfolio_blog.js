@@ -5,23 +5,33 @@ import "../style_portfolio.css"
 const BlogSection = ({ location, title, children }) => {
     const data = useStaticQuery(graphql`
     query BlogQuery {
-      allMicrocmsArticles(limit: 3, sort: {order: DESC, fields: date}) {
-        edges {
-          node {
-            articlesId
-            title
-            date(formatString: "MMMM DD, YYYY")
-            contents
-            category {
-              name
+        site {
+          siteMetadata {
+            blog {
+              title
+              summary
             }
           }
         }
-      }
-    }    
+        allMicrocmsArticles(limit: 3, sort: {order: DESC, fields: date}) {
+          edges {
+            node {
+              articlesId
+              title
+              date(formatString: "MMMM DD, YYYY")
+              contents
+              category {
+                name
+              }
+            }
+          }
+        }
+      }    
   `)
 
   const posts = data.allMicrocmsArticles.edges
+  const blogTitle = data.site.siteMetadata?.blog?.title || `Title`
+  const blogSummary = data.site.siteMetadata?.blog?.summary || `Summary`
 
     return (
         <section className="blog-section section" id="blog-section">
@@ -30,7 +40,7 @@ const BlogSection = ({ location, title, children }) => {
             <h2 className="heading-primary"><Link to="/blog/">BLOG</Link></h2>
           </div>
           <div className="section-lead">
-            <p>BLOG BLOG BLOG</p>
+            <p>{blogTitle} {blogSummary}</p>
           </div>
           <div className="section-body blog">
             <ol style={{ listStyle: `none` }}>

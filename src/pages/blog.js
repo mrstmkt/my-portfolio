@@ -2,12 +2,12 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import Layout from "../components/layout"
+import Layout from "../components/blog_layout"
 import SEO from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const siteTitle = data.site.siteMetadata?.blog?.title || `Title`
+  const posts = data.allMicrocmsArticles.edges
 
   if (posts.length === 0) {
     return (
@@ -25,14 +25,14 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="BLOG INDEX" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+        {posts.map(({node}) => {
+          const title = node.title || node.articlesId
 
           return (
-            <li key={post.fields.slug}>
+            <li key={node.articlesId}>
               <article
                 className="post-list-item"
                 itemScope
@@ -40,20 +40,20 @@ const BlogIndex = ({ data, location }) => {
               >
                 <header>
                   <h2>
-                    <Link to={post.fields.slug} itemProp="url">
+                    <Link to={`/blog/${node.articlesId}`} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
+                  <small>{node.date}</small>
                 </header>
-                <section>
+                {/* <section>
                   <p
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
                     }}
                     itemProp="description"
                   />
-                </section>
+                </section> */}
               </article>
             </li>
           )
@@ -69,21 +69,23 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+        blog {
           title
-          description
         }
       }
     }
-  }
+    allMicrocmsArticles(sort: {order: DESC, fields: date}) {
+      edges {
+        node {
+          articlesId
+          title
+          date(formatString: "MMMM DD, YYYY")
+          contents
+          category {
+            name
+          }
+        }
+      }
+    }
+  }    
 `

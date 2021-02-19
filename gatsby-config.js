@@ -16,6 +16,10 @@ module.exports = {
     social: {
       twitter: `mrstmkt`,
     },
+    blog: {
+      title: `BLOG of MORISHITA MAKOTO`,
+      summary: `いろいろ`,
+    },
   },
   plugins: [
     {

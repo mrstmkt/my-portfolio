@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/blog_layout"
 import SEO from "../components/seo"
+import {ArticleListItem} from "../components/blog_article"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.blog?.title || `Title`
@@ -33,8 +34,9 @@ const BlogIndex = ({ data, location }) => {
 
           return (
             <li key={node.articlesId}>
-              <article
-                className="post-list-item"
+              <ArticleListItem article={node} />
+              {/* <article
+                className={styles.postListItem}
                 itemScope
                 itemType="http://schema.org/Article"
               >
@@ -45,7 +47,7 @@ const BlogIndex = ({ data, location }) => {
                     </Link>
                   </h2>
                   <small>{node.date}</small>
-                </header>
+                </header> */}
                 {/* <section>
                   <p
                     dangerouslySetInnerHTML={{
@@ -54,7 +56,7 @@ const BlogIndex = ({ data, location }) => {
                     itemProp="description"
                   />
                 </section> */}
-              </article>
+              {/* </article> */}
             </li>
           )
         })}

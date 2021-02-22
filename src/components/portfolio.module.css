@@ -113,7 +113,7 @@ li {
   align-items: center;
   justify-content: center;
   height: 86vh;
-  background-image: url("./assets/20200621_131226.jpg");
+  background-image: url("../assets/20200621_131226.jpg");
   background-position: center center
 }
 
@@ -443,7 +443,9 @@ li {
 }
 .video-wrap video {
   display: block;
+  object-fit: fill;
   width: 100%;
+  max-height: 800px;
   margin: 0 0 0 auto;
 }
 p.logo-title {

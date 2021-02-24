@@ -248,6 +248,27 @@ li {
 .works-image.fadein.lazyloaded {
   opacity: 1;
 }
+.works-alt-image {
+  position: relative;
+  max-width: 100%;
+  background-color: #1ca9e3;
+  border: solid medium #1ca9e3;    
+  border-radius: 10px;
+}
+.works-alt-image:before {
+  content: "";
+  display: block;
+  padding-top: 75%;
+}
+.works-alt-image div {
+  position: absolute;
+  color: white;
+  text-align: center;
+  /* top: 50%; */
+  left: 0;
+  bottom: 50%;
+  right: 0;
+}
 
 /*--------------------------------
  Feature

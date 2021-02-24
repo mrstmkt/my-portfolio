@@ -114,7 +114,8 @@ li {
   justify-content: center;
   height: 86vh;
   background-image: url("../assets/20200621_131226.jpg");
-  background-position: center center
+  background-position: center center;
+  background-size: cover
 }
 
 .logo {
@@ -251,8 +252,9 @@ li {
 .works-alt-image {
   position: relative;
   max-width: 100%;
-  background-color: #1ca9e3;
-  border: solid medium #1ca9e3;    
+  /* background-color: #1ca9e3;
+  border: solid medium #1ca9e3;     */
+  background: linear-gradient(to bottom right, blue, pink);
   border-radius: 10px;
 }
 .works-alt-image:before {

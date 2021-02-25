@@ -47,13 +47,13 @@ const WorksSection = ({ location, title, children }) => {
                   }
                   else {
                     urlImage = (
-                      <img className={`${styles.worksImage} ${styles.lazyload} ${styles.fadein}`} src={`${node.image.url}?fit=crop&w=960&h=720`} data-src={node.image.url} alt="" />
+                      <img className={`${styles.worksImage} ${styles.hoverAction}`} src={`${node.image.url}?fit=crop&w=960&h=720`} alt="" />
                     )
                   }
 
                   return (
                     <figure className={styles.worksItem}>
-                    <a href={node.url}  className={`${styles.worksImageWrapper} ${styles.worksLink} ${styles.hoverAction}`} target="_blank"  rel="noreferrer">
+                    <a href={node.url}  className={`${styles.worksImageWrapper} ${styles.worksLink} `} target="_blank"  rel="noreferrer">
                       {urlImage}
                     </a>
                     <figcaption className={styles.worksBody}>

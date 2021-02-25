@@ -24,6 +24,12 @@ const BlogSection = ({ location, title, children }) => {
               category {
                 name
               }
+              skill
+              headerImage {
+                height
+                url
+                width
+              }
             }
           }
         }

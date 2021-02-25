@@ -86,6 +86,12 @@ export const pageQuery = graphql`
           category {
             name
           }
+          skill
+          headerImage {
+            height
+            url
+            width
+          }
         }
       }
     }

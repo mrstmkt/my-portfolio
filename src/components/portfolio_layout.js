@@ -35,6 +35,7 @@ const Layout = ({ location,  children }) => {
         <div className={styles.videoWrap}>
             <p className={styles.logoTitle}>{title}</p>
             <p className={styles.logoSubtitle}>{subtitle}</p>
+            <p className={styles.logoDescription}>木場潟から望む白山</p>
             <video src={bgVideo} autoPlay loop muted>
               <img src={placeHolder} alt="Placeholder" />
             </video>

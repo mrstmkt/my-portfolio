@@ -9,7 +9,8 @@ module.exports = {
     DEV_SSR: false,
   },  
   siteMetadata: {
-    title: `MORISHITA MAKOTO PORTFOLIO`,
+    title: `MORISHITA MAKOTO`,
+    subtitle: `a programmer in komatsu`,
     author: {
       name: `MORISHITA MAKOTO`,
       summary: `a programmer in komatsu`,

@@ -34,7 +34,7 @@ const Layout = ({ location,  children }) => {
         </nav>
         <div className={styles.videoWrap}>
             <p className={styles.logoTitle}>{title}</p>
-            <p className={styles.logoTitle}>{subtitle}</p>
+            <p className={styles.logoSubtitle}>{subtitle}</p>
             <video src={bgVideo} autoPlay loop muted>
               <img src={placeHolder} alt="Placeholder" />
             </video>

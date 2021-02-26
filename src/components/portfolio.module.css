@@ -482,12 +482,21 @@ li {
   margin: 0 0 0 auto;
 }
 p.logo-title {
-  font-family: serif;          
+  /* font-family: serif;           */
   color: #fff;
   font-size: 400%;
   position: absolute;
   left: 30%;
   top: 200px;
+  z-index: 1;
+}
+p.logo-subtitle {
+  /* font-family: serif;           */
+  color: #fff;
+  font-size: 150%;
+  position: absolute;
+  right: 30%;
+  bottom: 100px;
   z-index: 1;
 }
 /*media Queries 767

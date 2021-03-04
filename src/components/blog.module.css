@@ -79,3 +79,21 @@
   margin-bottom: var(--spacing-8);
 }
 
+.article-list-item {
+  display: flex;
+  justify-content: center;
+}
+.article-list-header-image {  
+  flex: 0 1 40%;
+  border-radius: 3px;
+  margin-left: 2%;
+}
+.article-list-header-image img{  
+  border-radius: 3px;
+  max-width: 80%;
+}
+.article-list-header-image div{  
+}
+.article-list-header {  
+  flex: 0 1 50%;
+}

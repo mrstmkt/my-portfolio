@@ -253,7 +253,7 @@ li {
   opacity: 0;
 }
 .works-image {
-  border-radius: 10px;
+  border-radius: 3px;
 }
 
 .works-image.fadein.lazyloaded {
@@ -265,7 +265,7 @@ li {
   /* background-color: #1ca9e3;
   border: solid medium #1ca9e3;     */
   background: linear-gradient(to bottom right, blue, pink);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .works-alt-image:before {
   content: "";

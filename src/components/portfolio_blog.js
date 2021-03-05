@@ -46,7 +46,7 @@ const BlogSection = ({ location, title, children }) => {
           <div className={styles.sectionHeading}>
             <h2 className={styles.headingPrimary}><Link to="/blog/">BLOG</Link></h2>
           </div>
-          <div className={styles.headingLead}>
+          <div className={styles.sectionLead}>
             <p>{blogTitle} {blogSummary}</p>
           </div>
           <div className={`${styles.sectionBody} ${styles.blog}`}>

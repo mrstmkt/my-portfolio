@@ -1,10 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
+// import Bio from "../components/bio"
 // import Layout from "../components/layout"
 import Layout from "../components/portfolio_layout"
 import WorksSection from "../components/portfolio_works"
+import AboutSection from "../components/portfolio_about"
 import BlogSection from "../components/portfolio_blog"
 import SEO from "../components/seo"
 
@@ -15,8 +16,9 @@ const Index = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="INDEX" />
-      <Bio />
+      {/* <Bio /> */}
       <WorksSection />
+      <AboutSection />
       <BlogSection />
     </Layout>
   )

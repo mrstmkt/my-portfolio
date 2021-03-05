@@ -21,8 +21,8 @@ module.exports = {
       twitter: `mrstmkt`,
     },
     blog: {
-      title: `BLOG of MORISHITA MAKOTO`,
-      summary: `いろいろ`,
+      title: `モリシブログ`,
+      summary: `テクノロジーと家庭菜園について`,
     },
   },
   plugins: [
@@ -38,6 +38,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/portfolio`,
+        name: `portfolio`,
       },
     },
     {

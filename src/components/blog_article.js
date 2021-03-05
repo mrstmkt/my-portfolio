@@ -11,9 +11,25 @@ export const ArticleListItem = ({ article }) => {
   }
   else {
     headerImage = (
-      <img src={`${article.headerImage.url}?fit=crop&w=960&h=720`} alt={article.title} />
+      <img src={`${article.headerImage.url}?fit=crop&w=960&h=540`} alt={article.title} />
     )
   }
+  let categories = (
+    <div>
+      {article.category.map((c) => (
+        <span className={styles.blogCategory}>{c.name}</span>
+      )) }
+    </div>
+  )
+  let skills = article.skill.split(",")
+  skills = skills.filter((s)=> s.trim().length > 0)
+  let skill = (
+    <div>
+      {skills.map((s) =>(
+        <span className={styles.blogSkill}>{s}</span>
+      ))}
+    </div>
+  )
 
 return (
       <article
@@ -32,7 +48,10 @@ return (
                   <span itemProp="headline">{article.title}</span>
                 </Link>
               </h2>
-              <small>📅 {article.date}</small>
+              {categories}
+
+              <div className={styles.blogDate}>{article.date}</div>
+              {skill}
             </header>
 
           </div>

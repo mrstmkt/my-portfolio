@@ -26,8 +26,8 @@ const Layout = ({ location,  children }) => {
         <nav className={`${styles.gnav} fixed`}>
         <ul className={styles.gnavList}>
             <li className={styles.gnavItem}><a className={styles.gnavLink} href="#works-section">WORKS</a></li>
-            <li className={styles.gnavItem}><a className={styles.gnavLink} href="#blog-section">BLOG</a></li>
             <li className={styles.gnavItem}><a className={styles.gnavLink} href="#about-section">ABOUT</a></li>
+            <li className={styles.gnavItem}><a className={styles.gnavLink} href="#blog-section">BLOG</a></li>
             {/* <li className={styles.gnavItem}><a className={styles.gnavLink} href="#skill-section">SKILL</a></li>
             <li className={styles.gnavItem}><a className={styles.gnavLink} href="#contact-section">CONTACT</a></li> */}
         </ul>

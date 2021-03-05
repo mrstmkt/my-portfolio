@@ -44,10 +44,10 @@ const BlogSection = ({ location, title, children }) => {
         <section className={`${styles.blogSection} ${styles.section}`} id="blog-section">
         <div className={styles.inner}>
           <div className={styles.sectionHeading}>
-            <h2 className={styles.headingPrimary}><Link to="/blog/">BLOG</Link></h2>
+            <h2 className={styles.headingPrimary}>BLOG</h2>
           </div>
           <div className={styles.sectionLead}>
-            <p>{blogTitle} {blogSummary}</p>
+            <p><Link to="/blog/">{blogTitle}</Link> {blogSummary}</p>
           </div>
           <div className={`${styles.sectionBody} ${styles.blog}`}>
             <ol style={{ listStyle: `none` }}>

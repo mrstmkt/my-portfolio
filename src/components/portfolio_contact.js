@@ -4,7 +4,7 @@ import styles from "./portfolio.module.css"
 import twitterIcon from "../assets/Twitter-social-icons-circle-blue.svg"
 import githubIcon from "../assets/GitHub-Mark-120px-plus.png"
 import facebookIcon from "../assets/f_logo_RGB-Blue_100.png"
-import instaIcon from "../assets/GitHub-Mark-120px-plus.png"
+import instaIcon from "../assets/Instagram_AppIcon_Aug2017.png"
 
 const ContactSection = ({ location, title, children }) => {
     const data = useStaticQuery(graphql`
@@ -34,16 +34,17 @@ const ContactSection = ({ location, title, children }) => {
           </div>
           <div className={styles.sectionLead}>
             <p>
-              お問い合わせは、<br className={styles.spOnly}/>SNSかメールでお願いいたします。
+              お問い合わせは、<br className={styles.spOnly}/>SNSか<a href="" target="_blank">お問い合わせフォーム</a>でお願いいたします。
             </p>
           </div>
           <div className={`${styles.sectionBody} ${styles.contact}`}>
             <ul className={styles.contactList}>
               <AccountLink url={`https://twitter.com/${twAccount}`} icon={twitterIcon}/>
               <AccountLink url={`https://www.facebook.com/${facebookAccount}/`} icon={facebookIcon}/>
+              <AccountLink url={`https://www.instagram.com/${instaAccount}`} icon={instaIcon}/>
               <AccountLink url={`https://github.com/${githubAccount}`} icon={githubIcon}/>
             </ul>
-            <div className={styles.contactText}>xxxxxx@gmail.com</div>
+            <div className={styles.contactText}><a class={styles.contactForm} href="" target="_blank">お問い合わせ</a></div>
           </div>
         </div>
       </section>

@@ -7,6 +7,7 @@ import Layout from "../components/portfolio_layout"
 import WorksSection from "../components/portfolio_works"
 import AboutSection from "../components/portfolio_about"
 import BlogSection from "../components/portfolio_blog"
+import ContactSection from "../components/portfolio_contact"
 import SEO from "../components/seo"
 
 const Index = ({ data, location }) => {
@@ -17,9 +18,10 @@ const Index = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="INDEX" />
       {/* <Bio /> */}
-      <WorksSection />
       <AboutSection />
+      <WorksSection />
       <BlogSection />
+      <ContactSection />
     </Layout>
   )
 }

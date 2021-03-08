@@ -19,6 +19,9 @@ module.exports = {
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
       twitter: `mrstmkt`,
+      facebook: `makoto.morishita1`,
+      instagram: `mrstmkt`,
+      github: `mrstmkt`,
     },
     blog: {
       title: `モリシブログ`,

@@ -28,8 +28,8 @@ const Layout = ({ location,  children }) => {
             <li className={styles.gnavItem}><a className={styles.gnavLink} href="#works-section">WORKS</a></li>
             <li className={styles.gnavItem}><a className={styles.gnavLink} href="#about-section">ABOUT</a></li>
             <li className={styles.gnavItem}><a className={styles.gnavLink} href="#blog-section">BLOG</a></li>
-            {/* <li className={styles.gnavItem}><a className={styles.gnavLink} href="#skill-section">SKILL</a></li>
-            <li className={styles.gnavItem}><a className={styles.gnavLink} href="#contact-section">CONTACT</a></li> */}
+            {/* <li className={styles.gnavItem}><a className={styles.gnavLink} href="#skill-section">SKILL</a></li> */}
+            <li className={styles.gnavItem}><a className={styles.gnavLink} href="#contact-section">CONTACT</a></li>
         </ul>
         </nav>
         <div className={styles.videoWrap}>

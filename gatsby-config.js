@@ -22,6 +22,7 @@ module.exports = {
       facebook: `makoto.morishita1`,
       instagram: `mrstmkt`,
       github: `mrstmkt`,
+      form: `https://forms.gle/VLG87Ao6iRMooPhK6`,
     },
     blog: {
       title: `モリシブログ`,

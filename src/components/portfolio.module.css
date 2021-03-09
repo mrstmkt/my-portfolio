@@ -508,6 +508,13 @@ p.logo-description {
   bottom: 30px;
   z-index: 1;
 }
+a.contact-form {
+  width: 50%;
+  padding: auto;
+  background-color: #1d1d1d;
+  color: #ccc;
+  display: inline-block;
+}
 /*media Queries 767
 ----------------------------------------------------*/
 @media screen and (max-width: 767px) {

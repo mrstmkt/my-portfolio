@@ -16,6 +16,7 @@ const ContactSection = ({ location, title, children }) => {
               instagram
               facebook
               github
+              form
             }
           }
         }
@@ -25,6 +26,7 @@ const ContactSection = ({ location, title, children }) => {
     const instaAccount = data.site.siteMetadata.social.instagram
     const facebookAccount = data.site.siteMetadata.social.facebook
     const githubAccount = data.site.siteMetadata.social.github
+    const formUrl = data.site.siteMetadata.social.form
 
     return (
       <section className={`${styles.contactSection} ${styles.section}`} id="contact-section">
@@ -34,7 +36,7 @@ const ContactSection = ({ location, title, children }) => {
           </div>
           <div className={styles.sectionLead}>
             <p>
-              お問い合わせは、<br className={styles.spOnly}/>SNSか<a href="" target="_blank">お問い合わせフォーム</a>でお願いいたします。
+              お問い合わせは、<br className={styles.spOnly}/>SNSか<a href={formUrl} target="_blank">お問い合わせフォーム</a>でお願いいたします。
             </p>
           </div>
           <div className={`${styles.sectionBody} ${styles.contact}`}>
@@ -44,20 +46,20 @@ const ContactSection = ({ location, title, children }) => {
               <AccountLink url={`https://www.instagram.com/${instaAccount}`} icon={instaIcon}/>
               <AccountLink url={`https://github.com/${githubAccount}`} icon={githubIcon}/>
             </ul>
-            <div className={styles.contactText}><a class={styles.contactForm} href="" target="_blank">お問い合わせ</a></div>
+            <div className={styles.contactText}><a class={styles.contactForm} href={formUrl} target="_blank">✉ お問い合わせ</a></div>
           </div>
         </div>
       </section>
     )
   }
   
-  export default ContactSection 
-  
-  const AccountLink = ({url, icon}) => {
-    return (
-      <li className={styles.contactItem}>
-      <a className={styles.contactLink} href={url} target="_blank"><img className={styles.contactImage}
-          src={icon} alt=""/></a>
-      </li>
-    )
-  }
+export default ContactSection 
+
+const AccountLink = ({url, icon}) => {
+  return (
+    <li className={styles.contactItem}>
+    <a className={styles.contactLink} href={url} target="_blank"><img className={styles.contactImage}
+        src={icon} alt=""/></a>
+    </li>
+  )
+}

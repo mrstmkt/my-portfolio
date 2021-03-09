@@ -333,6 +333,17 @@ li {
 .about-body p:not(:last-child) {
   margin-bottom: 20px;
 }
+.about-item h1, .about-item h2, .about-item h3 {
+  display: inline-block;
+  width: 100%;
+  background-color: black;
+  color: whitesmoke;
+  padding: 1%;
+}
+.about-item h3 {
+  background-color: #ffffff00;
+  color: black;
+}
 
 /*--------------------------------
  Skill

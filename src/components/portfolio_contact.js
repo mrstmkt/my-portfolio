@@ -32,7 +32,7 @@ const ContactSection = ({ location, title, children }) => {
       <section className={`${styles.contactSection} ${styles.section}`} id="contact-section">
         <div className={styles.inner}>
           <div className={styles.sectionHeading}>
-            <h2 className={styles.sectionPrimary}>CONTACT</h2>
+            <h2 className={styles.headingPrimary}>CONTACT</h2>
           </div>
           <div className={styles.sectionLead}>
             <p>

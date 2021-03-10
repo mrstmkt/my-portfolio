@@ -26,12 +26,12 @@ export const ArticleListItem = ({ article }) => {
   let skill = (
     <div>
       {skills.map((s) =>(
-        <span className={styles.blogSkill}>{s}</span>
+        <span className={styles.blogSkill}>{s.trim()}</span>
       ))}
     </div>
   )
 
-return (
+  return (
       <article
         className={styles.postListItem}
         itemScope

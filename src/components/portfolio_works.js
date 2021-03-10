@@ -50,7 +50,16 @@ const WorksSection = ({ location, title, children }) => {
                       <img className={`${styles.worksImage} ${styles.hoverAction}`} src={`${node.image.url}?fit=crop&w=960&h=720`} alt="" />
                     )
                   }
-
+                  let skills = node.skill.split(",")
+                  skills = skills.filter((s)=> s.trim().length > 0)
+                  let skill = (
+                    <div>
+                      {skills.map((s) =>(
+                        <span className={styles.worksSkill}>{s.trim()}</span>
+                      ))}
+                    </div>
+                  )
+                
                   return (
                     <figure className={styles.worksItem}>
                     <a href={node.url}  className={`${styles.worksImageWrapper} ${styles.worksLink} `} target="_blank"  rel="noreferrer">
@@ -59,7 +68,8 @@ const WorksSection = ({ location, title, children }) => {
                     <figcaption className={styles.worksBody}>
                       <div className={styles.worksTitle}>{node.title}</div>
                       <div className={styles.worksText}>{node.description}</div>
-                      <div className={styles.worksText}>{node.skill}</div>
+                      {skill}
+                      {/* <div className={styles.worksText}>{node.skill}</div> */}
                     </figcaption>
                   </figure>
                   )

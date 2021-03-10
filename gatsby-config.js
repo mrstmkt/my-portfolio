@@ -26,7 +26,7 @@ module.exports = {
     },
     blog: {
       title: `モリシブログ`,
-      summary: `テクノロジーと家庭菜園について`,
+      summary: `💻テクノロジー📱と🍅家庭菜園🥒について`,
     },
   },
   plugins: [

@@ -43,18 +43,14 @@ return (
           </div>
           <div className={`${styles.articleListHeader} ${styles.blogPost}`}>
             <header>
-              <div className={styles.blogCategorySkill}>
-              {categories}
-              {skill}
-              </div>
-              <br/>
               <h2>
                 <Link to={`/blog/${article.articlesId}`} itemProp="url">
                   <span itemProp="headline">{article.title}</span>
                 </Link>
               </h2>
               <div className={styles.blogDate}>{article.date}</div>
-              <br/>
+              {categories}
+              {skill}
             </header>
 
           </div>

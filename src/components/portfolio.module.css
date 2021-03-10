@@ -213,6 +213,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -40px;
+  justify-content: space-between;
 }
 
 .works-item {
@@ -529,6 +530,19 @@ a.contact-form {
   color: #ccc;
   display: inline-block;
 }
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -40px;
+}
+.blog-list article {
+  display: block;
+  flex: 0 0 29%;
+  margin-right: 1.52671%;
+  margin-bottom: 40px;
+}
+
+
 /*media Queries 767
 ----------------------------------------------------*/
 @media screen and (max-width: 767px) {

@@ -50,17 +50,14 @@ const BlogSection = ({ location, title, children }) => {
             <p><Link to="/blog/">{blogTitle}</Link> {blogSummary}</p>
           </div>
           <div className={`${styles.sectionBody} ${styles.blog}`}>
-            <ol style={{ listStyle: `none` }}>
+            <div className={styles.blogList}>
               {posts.map(({node}) => {
-                const title = node.title || node.articlesId
 
-                return (
-                  <li key={node.articlesId}>
+                  return (
                     <ArticleListItem article={node} />
-                  </li>
-                )
-              })}
-            </ol>
+                    )
+                })}
+            </div>
 
 
           </div>

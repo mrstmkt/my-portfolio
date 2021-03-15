@@ -516,9 +516,9 @@ li {
 p.logo-title {
   /* font-family: serif;           */
   color: #fff;
-  font-size: 400%;
+  font-size: 350%;
   position: absolute;
-  left: 30%;
+  left: 25%;
   top: 200px;
   z-index: 1;
 }
@@ -618,7 +618,7 @@ a.contact-form {
   }
 
   .logo-title {
-    font-size: 28px;
+    font-size: 25px;
     letter-spacing: .16em;
   }
 

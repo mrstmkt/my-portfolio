@@ -345,6 +345,8 @@ li {
 .about-image {
   border-radius: 50%;
   box-shadow: 0 0 25px 0 #d9d9d9;
+  display: block;
+  margin : 0 auto;
 }
 
 .about-body {
@@ -688,7 +690,7 @@ a.contact-form {
   }
 
   .about-image-wrapper {
-    width: 100px;
+    /* width: 100px; */
     max-width: 100%;
     margin: 0 auto 20px;
   }

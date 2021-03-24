@@ -3,6 +3,9 @@
 
 name: Deploy to Firebase Hosting on merge
 'on':
+  repository_dispatch:
+    types: [portfolio_update_notify]
+
   push:
     branches:
       - main

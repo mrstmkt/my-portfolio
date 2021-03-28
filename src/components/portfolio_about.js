@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import styles from "./portfolio.module.css"
 import profileImage from "../assets/in178886799702107216324.jpg"
 
-const WorksSection = ({ location, title, children }) => {
+const AboutSection = ({ location, title, children }) => {
     const data = useStaticQuery(graphql`
       query AboutQuery {
         allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/career.md|selfpr.md/"}}) {
@@ -38,7 +38,7 @@ const WorksSection = ({ location, title, children }) => {
           </div>
           <div className={styles.sectionLead}>
             <p>
-              こんにちは！
+              こんにちは！モリシタマコトです。
             </p>
           </div>
           <div className={`${styles.sectionBody} ${styles.sectionBody}`}>
@@ -55,5 +55,5 @@ const WorksSection = ({ location, title, children }) => {
     )
   }
   
-  export default WorksSection 
+  export default AboutSection 
   

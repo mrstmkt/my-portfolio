@@ -25,7 +25,7 @@ module.exports = {
       form: `https://forms.gle/VLG87Ao6iRMooPhK6`,
     },
     blog: {
-      title: `モリシブログ`,
+      title: `モリシブ`,
       summary: `💻テクノロジー📱と🍅家庭菜園🥒について`,
     },
   },

@@ -1,8 +1,8 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import styles from "./portfolio.module.css"
 
-const WorksSection = ({ location, title, children }) => {
+const WorksSection = ({ location,  children }) => {
     const data = useStaticQuery(graphql`
       query WorksQuery {
         allMicrocmsWorks(sort: {order: ASC, fields: order}) {
@@ -38,7 +38,7 @@ const WorksSection = ({ location, title, children }) => {
           <div className={`${styles.sectionBody} ${styles.works}`}>
             <div className={`${styles.worksList} ${styles.jsMyGallery}`}>
               {works.map(({node}) => {
-                  const title = node.title || node.articlesId
+                  // const title = node.title || node.articlesId
                   let urlImage
                   if(node.image.width === 1 && node.image.height === 1) {
                     urlImage = (

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import styles from "./portfolio.module.css"
 import twitterIcon from "../assets/Twitter-social-icons-circle-blue.svg"
 import githubIcon from "../assets/GitHub-Mark-120px-plus.png"
@@ -36,7 +36,7 @@ const ContactSection = ({ location, title, children }) => {
           </div>
           <div className={styles.sectionLead}>
             <p>
-              お問い合わせは、<br className={styles.spOnly}/>SNSか<a href={formUrl} target="_blank">お問い合わせフォーム</a>でお願いいたします。
+              お問い合わせは、<br className={styles.spOnly}/>SNSか<a href={formUrl} target="_blank" rel="noreferrer">お問い合わせフォーム</a>でお願いいたします。
             </p>
           </div>
           <div className={`${styles.sectionBody} ${styles.contact}`}>
@@ -46,7 +46,7 @@ const ContactSection = ({ location, title, children }) => {
               <AccountLink url={`https://www.instagram.com/${instaAccount}`} icon={instaIcon}/>
               <AccountLink url={`https://github.com/${githubAccount}`} icon={githubIcon}/>
             </ul>
-            <div className={styles.contactText}><a class={styles.contactForm} href={formUrl} target="_blank">✉ お問い合わせ</a></div>
+            <div className={styles.contactText}><a class={styles.contactForm} href={formUrl} target="_blank" rel="noreferrer">✉ お問い合わせ</a></div>
           </div>
         </div>
       </section>
@@ -58,7 +58,7 @@ export default ContactSection
 const AccountLink = ({url, icon}) => {
   return (
     <li className={styles.contactItem}>
-    <a className={styles.contactLink} href={url} target="_blank"><img className={styles.contactImage}
+    <a className={styles.contactLink} href={url} target="_blank" rel="noreferrer"><img className={styles.contactImage}
         src={icon} alt=""/></a>
     </li>
   )

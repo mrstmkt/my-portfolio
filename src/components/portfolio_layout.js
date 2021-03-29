@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, graphql  } from "gatsby"
+import { useStaticQuery, graphql  } from "gatsby"
 import bgVideo from "../assets/VID_20200618_220631_292.mp4"
 import placeHolder from  "../assets/20200621_131226.jpg"
 import styles from "./portfolio.module.css"

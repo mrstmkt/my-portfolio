@@ -38,7 +38,7 @@ const WorksSection = ({ location,  children }) => {
           <div className={`${styles.sectionBody} ${styles.works}`}>
             <div className={`${styles.worksList} ${styles.jsMyGallery}`}>
               {works.map(({node}) => {
-                  // const title = node.title || node.articlesId
+                  const title = node.title || node.articlesId
                   let urlImage
                   if(node.image.width === 1 && node.image.height === 1) {
                     urlImage = (
@@ -47,7 +47,7 @@ const WorksSection = ({ location,  children }) => {
                   }
                   else {
                     urlImage = (
-                      <img className={`${styles.worksImage} ${styles.hoverAction}`} src={`${node.image.url}?fit=crop&w=960&h=720`} alt="" />
+                      <img className={`${styles.worksImage} ${styles.hoverAction}`} src={`${node.image.url}?fit=crop&w=960&h=720&txt-size=100&txt-color=0000&txt-pad=100&txt-line=3&txt=${encodeURIComponent(title)}`} alt="" />
                     )
                   }
                   let skills = node.skill.split(",")

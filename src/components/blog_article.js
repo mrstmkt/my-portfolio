@@ -63,7 +63,7 @@ export const ArticleListItem = ({ article }) => {
 export const Article = ({ article }) => {
   let html = ""
   if(article.contents) {
-    html = article.contents.map(c=> c.rich + c.html).join()
+    html = article.contents.map(c=> c.rich?c.rich:"" + c.html?c.html:"").join()
   }
     return (
         <article

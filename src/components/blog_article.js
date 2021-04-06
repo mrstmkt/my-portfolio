@@ -63,8 +63,9 @@ export const ArticleListItem = ({ article }) => {
 export const Article = ({ article }) => {
   let html = ""
   if(article.contents) {
-    html = article.contents.map(c=> c.rich?c.rich:"" + c.html?c.html:"").join()
+    html = article.contents.map(c => (c.rich ? c.rich: "") + (c.html?c.html: "")).join()
   }
+  console.log(article.contents)
     return (
         <article
         className={styles.postListItem}

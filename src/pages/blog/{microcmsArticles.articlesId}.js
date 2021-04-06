@@ -26,7 +26,10 @@ export const query = graphql`
     microcmsArticles(id: { eq: $id }) {
       articlesId
       title
-      contents
+      contents {
+        rich
+        html
+      }
       date
       author {
         name

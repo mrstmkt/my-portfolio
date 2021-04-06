@@ -20,7 +20,10 @@ const BlogSection = ({ location, title, children }) => {
               articlesId
               title
               date(formatString: "MMMM DD, YYYY")
-              contents
+              contents {
+                rich
+                html
+              }
               category {
                 name
               }

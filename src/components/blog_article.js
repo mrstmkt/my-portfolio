@@ -61,6 +61,10 @@ export const ArticleListItem = ({ article }) => {
 }
 
 export const Article = ({ article }) => {
+  let html = ""
+  if(article.contents) {
+    html = article.contents.map(c=> c.rich + c.html).join()
+  }
     return (
         <article
         className={styles.postListItem}
@@ -78,7 +82,7 @@ export const Article = ({ article }) => {
         <section>
           <p
             dangerouslySetInnerHTML={{
-              __html: article.contents,
+              __html: html,
             }}
             itemProp="description"
           />
